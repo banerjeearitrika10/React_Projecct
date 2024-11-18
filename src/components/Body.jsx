@@ -89,9 +89,14 @@ const Body = () => {
         </div>
         
       </div>
-      <span className="subHeader pb-2">{subHeader1}</span>
+      
+      {searchText ? null :
+      <><span className="subHeader pb-2">{subHeader1}</span>
       <ResturantCardSlider data={listOfRestaurant} />
-      <hr />
+      <hr /></>
+      }
+      
+      
       <div className="d-flex  justify-content-between mt-5 mb-3">
       <span className="subHeader">{subHeader2}</span>
       <button className="filter-btn btn" onClick={onClickFilter}>
