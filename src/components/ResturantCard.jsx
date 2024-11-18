@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ResturantCard = (props) => {
     console.log(props.data);
     const data = props.data || [];
@@ -6,8 +8,8 @@ const ResturantCard = (props) => {
         <div className="cardContainer d-flex">
             {
                 data.map((cardData,index) => (
-                
-                <div className="card card-row" key={index}>
+                <Link key={cardData.info.id || index} to={"/restaurant/" + cardData.info.id} style={{textDecoration:"none"}}>
+                <div className="card card-row" style={{cursor:"pointer"}}>
                 <div width="100%" height="100%" className="sc-dtInlm eNZkiz">
                         <img className="sc-bXCLTC jRHowI" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cardData.info.cloudinaryImageId} alt="" width="273" height="182"/>
                         <div className="sc-dtBdUo gzvYBM sc-kOPcWz fFPUzA">
@@ -24,6 +26,8 @@ const ResturantCard = (props) => {
                         <p className="card-text">{cardData.info.areaName}</p>
                     </div>
                 </div>
+                </Link>
+                
                 ))
             }
         </div>

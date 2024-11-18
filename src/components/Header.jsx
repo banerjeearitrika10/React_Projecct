@@ -7,9 +7,11 @@ const Header = () => {
     const [btnName , setbtnName] = useState("Login");
     return (
         <div className="header">
-            <div className="logo">
-                <img src={logo} alt="" width="50" height="50"/>
+            <div className="logo d-flex align-items-center">
+                <img src={logo} alt="" width="50" height="50" className="mr-2"/>
+                <h3 className="ml-2">Foodvita</h3>
             </div>
+            
             <div className="nav align-items-center">
                 <ul className="mb-0">
                    <li>

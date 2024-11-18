@@ -26,5 +26,13 @@
 - Functional component(function that return JSX code)
 
 # Hooks -> react utility function
-- we use the 2nd array element(set) to trigger the algoritm and check the diff between virtual DOM , and automatically update ythe real DOM
+-In useState we use the 2nd array element(set) to trigger the algoritm and check the diff between virtual DOM , and automatically update ythe real DOM
 
+-useEffects - first argument is a callback and 2nd is a dependency array
+  if no dependency array => useEffects is called in every render
+  if dependency array is empty = [] => useEffect is callled on initial render(just Once)
+  if dependency array has some state variable , it get called when the state of the variable is changed
+
+# Routing
+-ServerSide Routing
+-ClientSide Routing - in react we use this
